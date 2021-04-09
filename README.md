@@ -28,13 +28,13 @@ Can be passed a mod file path as a single argument if you only want to output th
 - `-m, --use-mod-date` Falls back to using the input mod's file modified date for the ID3 date.
 
 ### Examples
+
+```dos
 mod_metadata_extractor mod_file.mod
-
 mod_metadata_extractor mod_file.mod > mod_file.txt
-
 mod_metadata_extractor -i mod_file.mod -o mp3_file.mp3 -arfm
-
 mod_metadata_extractor --mod=mod_file.mod --mp3=mp3_file.mp3 --id3v2=3
+```
 
 ## Converting Mods to MP3
 Module music can be particularly difficult to convert because (like MIDIs) much of the playback is left to the player software, the various file formats have different features and are non-standardized, and thus all the commands, effects, and resampling are open to interpretation. I started listening to mods in the days of Windows 98, so I grew to be partial to the sound of ModPlug Player, the most popular module player of the time. But some mods will even explicitly state in their comments what player is intended to be used for the best playback.
