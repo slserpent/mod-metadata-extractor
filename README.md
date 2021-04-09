@@ -29,8 +29,11 @@ Can be passed a mod file path as a single argument if you only want to output th
 
 ### Examples
 mod_metadata_extractor mod_file.mod
+
 mod_metadata_extractor mod_file.mod > mod_file.txt
+
 mod_metadata_extractor -i mod_file.mod -o mp3_file.mp3 -arfm
+
 mod_metadata_extractor --mod=mod_file.mod --mp3=mp3_file.mp3 --id3v2=3
 
 ## Converting Mods to MP3
