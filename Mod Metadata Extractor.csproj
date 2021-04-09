@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Mod_Metadata_Extractor</RootNamespace>
+    <StartupObject></StartupObject>
+    <AssemblyName>mod_metadata_extractor</AssemblyName>
+    <Nullable>enable</Nullable>
+    <NoWin32Manifest>true</NoWin32Manifest>
+    <Description>Copies the metadata from a module music file to an MP3 file with ID3v2 tags.</Description>
+    <Authors>Snake</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <PlatformTarget>x64</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="art\assets.txt" />
+    <None Remove="art\fasttracker.pspimage" />
+    <None Remove="art\impulsetracker.pspimage" />
+    <None Remove="art\other.pspimage" />
+    <None Remove="art\protracker.pspimage" />
+    <None Remove="art\screamtracker.pspimage" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+    <PackageReference Include="TagLibSharp" Version="2.2.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<ContentWithTargetPath Include="art\fasttracker.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>fasttracker.jpg</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="art\impulsetracker.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>impulsetracker.jpg</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="art\other.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>other.jpg</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="art\protracker.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>protracker.jpg</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="art\screamtracker.jpg">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>screamtracker.jpg</TargetPath>
+		</ContentWithTargetPath>
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<ContentWithTargetPath Include="libopenmpt\bin\amd64\libopenmpt.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>libopenmpt.dll</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="libopenmpt\bin\amd64\openmpt-mpg123.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>openmpt-mpg123.dll</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="libopenmpt\bin\amd64\openmpt-ogg.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>openmpt-ogg.dll</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="libopenmpt\bin\amd64\openmpt-vorbis.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>openmpt-vorbis.dll</TargetPath>
+		</ContentWithTargetPath>
+		<ContentWithTargetPath Include="libopenmpt\bin\amd64\openmpt-zlib.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<TargetPath>openmpt-zlib.dll</TargetPath>
+		</ContentWithTargetPath>
+  </ItemGroup>
+
+</Project>
