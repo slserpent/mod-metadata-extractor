@@ -10,6 +10,8 @@
     <NoWin32Manifest>true</NoWin32Manifest>
     <Description>Copies the metadata from a module music file to an MP3 file with ID3v2 tags.</Description>
     <Authors>Snake</Authors>
+    <PackageProjectUrl>https://github.com/slserpent/mod-metadata-extractor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/slserpent/mod-metadata-extractor</RepositoryUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -424,7 +424,7 @@ namespace Mod_Metadata_Extractor {
         [Option('o', "mp3", HelpText = "Output MP3 file path. Writes metadata to stdout if omitted.")]
         public string? MP3File { get; set; }
 
-        [Option("id3v2", HelpText = "Version of ID3v2 to use, a value between 2 and 4. Effects compatibility with other apps. Defaults to v2.3 or the file's existing ID3 version if omitted.")]
+        [Option("id3v2", HelpText = "Version of ID3v2 to use, a value between 2 and 4. Affects compatibility with other apps. Defaults to v2.3 or the file's existing ID3 version if omitted.")]
         public byte? id3_version { get; set; }
 
         [Option('a', "album-art", Default = false, HelpText = "Turns on adding album art image to the MP3 file based on the tracker used.")]
